@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<head>
+
+	<title>PerfectCV Documentation</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="keywords" content="PerfectCV, Tutorial, Documentation, Text" />
+    <meta name="author" content="PixelDizajn" />
+    <meta name="robots" content="noindex, nofollow">
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <link rel="stylesheet" href="src/bootstrap.min.css">
+    <link rel="stylesheet" href="src/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="src/layout.css">
+    <link rel="stylesheet" href="src/shCoreDefault.css">
+    
+    <script type="text/javascript" src="src/jquery-1.8.3.min.js"></script>
+    <script type='text/javascript' src='src/bootstrap.min.js'></script>
+    <script type='text/javascript' src='src/shCore.js'></script>
+    <script type='text/javascript' src='src/shBrushJScript.js'></script>
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    <script type='text/javascript' src='src/main.js'></script>
+    
+</head>
+
+<body data-spy="scroll">
+
+ <header id="top">
+  <div class="container">
+ 
+   <h1>PerfectCV Docs</h1>
+   <p>PerfectCV Documentation for ease of implementation and editing</p>
+  
+  </div>
+ </header>
+
+ <div class="container">
+  <div class="row-fluid">
+  
+   <div class="span3" id="navigation">
+
+    <ul class="nav nav-list">
+     <li><a href="#contents">Contents</a></li>
+     <li><a href="#installation">Installation</a></li>
+     <li><a href="#html">HTML Structure</a></li>
+     <li><a href="#css">CSS Structure</a></li>
+     <li><a href="#scripts">Scripts</a></li>
+     <li><a href="#psd">PSD Files</a></li>
+     <li><a href="#credits">Credits</a></li>
+    </ul>
+        
+   </div>
+   
+   <div class="span9" id="content">
+   
+    <h4>Thank you very much for purchasing from Pixel.<br /><br /><i>If you're satisfied with this item, please don't forget to rate it 5 stars!</i></h4>
+    <p>If you have any issues or questions that aren't covered in these docs, you can contact us via email <a href="mailto:kontakt@pixeldizajn.com">kontakt@pixeldizajn.com</a>.</p>
+    <hr />
+    <h3 id="contents">Table of Contents</h3>
+    <hr />
+    
+    <ul class="nav nav-list">
+     <li><a href="#installation">Installation</a></li>
+     <li><a href="#html">HTML Structure</a></li>
+     <li><a href="#css">CSS Structure</a></li>
+     <li><a href="#scripts">Scripts</a></li>
+     <li><a href="#psd">PSD Files</a></li>
+     <li><a href="#credits">Credits</a></li>
+    </ul>
+    
+    <br />
+    <h3 id="installation">Template Installation</h3>
+    <hr />
+    
+    <p>You can view this template in any web browser from your desktop computer. Because the files are written in HTML, you do not need to upload it to a server in order to display or edit the template.</p>
+    <h5 style="margin-bottom:10px;">Upload to The Server</h5>
+    <ol>
+     <li>It's important to understand that you must have a server space to upload your template to. The server space can be purchased at many different places around the internet, if you're not experienced in this, search for 'web hosting' on Google.</li>
+     <li>Select <strong>PerfectCV</strong> folder inside the same folder the documentation folder is. After that, you will see serveral folders and one index<strong>.html</strong> file. This is where all your CV contents will be. In addition to <strong>.html</strong> you should see a few files labeled <strong>.css</strong> inside the css folder. <strong>.css</strong> files are going to be the files that style the <strong>.html</strong>. It's very important to keep the <strong>.css</strong> files linked with in the HTML or the the design of this template will not look how it's meant to look. Along with the index.html and css folder, you will also have 5 additional folders to upload; <strong>bootstrap (this template is based on twitter bootstrap), fontello (icon fonts), img and php (phpmailer form files)</strong>.</li>
+     <li>Start your FTP client (We recommend Filezila or WinSCP which are free) and login to your server. You will need your server name (often times this will be your domain name), username, and password that you setup with the hosting company.</li>
+     <li>Locate the domain folder you wish to upload your template files to. You are going to want to click and drag every file that you have labeled into that folder on your FTP client.</li>
+     <li>Once the files are done uploading, you can try to access your website via browser.</li>
+    </ol>
+    
+    <br />
+    <h3 id="html">HTML Structure</h3>
+    <hr />
+    
+    <p>This CV template has a responsive layout with a set maximum width. This template uses the <strong>Twitter bootstrap framework</strong> which will help streamline any customization you wish to make. If you're unfamiliar with the Twitter Bootstrap fluid 12-column framework, be sure to read about it <a href="http://twitter.github.com/bootstrap/scaffolding.html#fluidGridSystem" target="_blank">here</a>.</p>
+    <p>The main structure of this site is wrapped in a <strong>'container'</strong> div which is inside a 'wrapper' div. Inside of that div you will find each major section of the site given an appropriate fluid grid size all equalling 12 columns in length. For example, the <strong>'.aside_el'</strong> side section title element has a class of <strong>'span3'</strong> while the contents next to it have a class of <strong>'span9'</strong>. The total columns equals <strong>12 columns</strong>.</p>
+    
+    <pre class="brush: js; ruler: true; first-line: 1;">
+	 &lt;div class="container"&gt;
+      &lt;div class="row-fluid"&gt;
+       &lt;aside class="span3 aside_el"&gt; ... &lt;/aside&gt;
+       &lt;div class="span9"&gt; ... &lt;/div&gt;
+      &lt;/div&gt;
+     &lt;/div&gt;
+    </pre>
+   
+    <p>If you would like to edit the color, font, or style of any elements in one of these columns, you would do the following in <strong>css/styles.css</strong> :</p>
+   
+    <pre class="brush: js; ruler: true; first-line: 1;">
+     .site_header h1 {
+      /* Text */
+      font: 6em 'Arvo', serif; /* 60px/10 */
+      line-height: 0.66666666em; /* 40px/60px */
+      font-weight: bold;
+      color: #464646;
+      /* Positioning & Display */
+      display: inline-block;
+      padding-right: 5px;
+      padding-left: 5px;
+      z-index: 2;
+    }
+    </pre>
+   
+    <p>If you find that your new style is not overriding, it is most likely because of a specificity problem. Scroll down in your CSS file and make sure that there isn't a similar style that has more weight.</p>
+   
+    <p>So, to ensure that your new styles are applied, make sure that they carry enough "weight" and that there isn't a style lower in the CSS file that is being applied after yours and to the same element.</p>
+   
+    <br />
+    <h4>Site elements that need to be changed:</h4>
+    
+    <br /><h5>Logo, title and description</h5>
+    
+    <p>You can change the CV logo/name and the description in the code below:</p>
+    
+    <pre class="brush: js; ruler: true; highlight:[2, 3, 4]">
+     &lt;header class=&quot;site_header centerise borderbtn&quot;&gt;
+     &lt;div id=&quot;logoline&quot;&gt;&lt;h1&gt;JOHN DOE&lt;/h1&gt;&lt;/div&gt;
+     &lt;h2&gt;FREELANCE DESIGNER&lt;/h2&gt;
+     &lt;h3&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius risus ut purus dignissim sed sagittis libero rutrum.&lt;/h3&gt;
+     &lt;/header&gt; &lt;!-- /site_header --&gt;
+    </pre>
+    
+    <br /><h5>About me and profile picture</h5>
+    
+    <p>Each section of the cv is located below an aside element that contains the title of that section, so it's pretty easy to locate. Here's the code that holds the 'mypic' profile picture and the about me text.</p>
+    
+    <pre class="brush: js; ruler: true; highlight:[2, 3]">
+     &lt;article class=&quot;span6 borderleft par_el&quot;&gt;
+        &lt;span class=&quot;circle&quot;&gt;&lt;img style=&quot;float:left&quot; src=&quot;img/mypic.jpg&quot; alt=&quot;&quot;/&gt;&lt;/span&gt;
+        &lt;p&gt;Hello, I’m Lorem ipsum dolor sit amet, conseur adipiscing elit puella magna est.&lt;/p&gt;
+        &lt;p&gt;Etiam sem eros, interdum at rutrum et, hendrerit id nisi. Etiam iaculis lorem eget arcu gravida lacinia.&lt;/p&gt;
+        &lt;p&gt;Fringilla justo ullamcorper ac. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Raesent sem elit, volutpat id vulputate faucibus, fringilla vel massa. Proin nec mi a mi tincidunt elementum sed vel ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie, lorem ut vehicula.&lt;/p&gt;
+    &lt;/article&gt;
+    </pre>
+    <br /><h5>Social profiles and contact info</h5>
+    
+    <p>Icons for major social media sites are already inserted, you just need to put the link to your profiles inside the href="" in a elements around the img elements. Contact info is pretty straightforward, just replace the dummy content with yours.</p>
+    
+    <pre class="brush: js; ruler: true; highlight:[3, 4, 5, 6, 7, 12, 13, 14]">
+     &lt;div class=&quot;soc&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;img/icons/facebook.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;img/icons/twitter.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;img/icons/linkedin.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;img/icons/google-plus.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;img/icons/rss.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;info&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;span class=&quot;icon-mobile&quot;&gt;&lt;/span&gt;&lt;a&gt;+387 51 000 111&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;span class=&quot;icon-location&quot;&gt;&lt;/span&gt;&lt;a&gt;Braće Jugovića 21&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;span class=&quot;icon-mail&quot;&gt;&lt;/span&gt;&lt;a&gt;mail@mail.com&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    </pre>
+    <br /><h5>My expertise (skills)</h5>
+    
+    <p>Changing the texts next to the skill progress bars is pretty easy, just change the content inside the p elements for each paragraph. You can add more if you want of course. To change the skill name, just change the contents of the h4 elements (highlighted below) and to change the skill percentage just change the percent_x class of the div element below, the x being the percentage number you want (E.g. for 40% you would change the class to percent_40).</p>
+    
+    <pre class="brush: js; ruler: true; highlight:[2, 3, 4, 7, 8, 11, 12, 15, 16, 19, 20]">
+        &lt;article class="span4 borderleft par_el"&gt;
+            &lt;p&gt;Fringilla justo ullamcorper ac. Class aptent taciti sociosqu ad litora torque per conubia nostra, per inceptos himenaeos magna puella molto est.&lt;/p&gt;
+            &lt;p&gt;Raesent sem elit, volutpat id vulputate faucibus, fringilla vel mass. Proin nec mi a mi tincidunt elementu sed vel ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+            &lt;p&gt;I love doing what I do.&lt;/p&gt;
+        &lt;/article&gt;
+        &lt;div class="span5 skill_level"&gt;
+            &lt;h4&gt;UX Design&lt;/h4&gt;
+            &lt;div class="progressbar percent_70"&gt;
+                &lt;div class="progressbar-inner"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;h4&gt;HTML5 with CSS3&lt;/h4&gt;
+            &lt;div class="progressbar percent_100"&gt;
+                &lt;div class="progressbar-inner"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;h4&gt;PHP&amp;MySQL&lt;/h4&gt;
+            &lt;div class="progressbar percent_30"&gt;
+                &lt;div class="progressbar-inner"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;h4&gt;Javascript&lt;/h4&gt;
+            &lt;div class="progressbar percent_90"&gt;
+                &lt;div class="progressbar-inner"&gt;&lt;/div&gt;
+            &lt;/div&gt;                    
+        &lt;/div&gt; &lt;!-- /skill_level --&gt;
+    </pre>
+    <br /><h5>Experience and education</h5>
+    
+    <p>Experience and education have the same structure, you just need the edit the positions/names inside h2 and h3 elements, the period you worked/studied there inside the span element with the class of 'period' and lastly if you want you can change the text contents inside the p elements.</p>
+    
+    <pre class="brush: js; ruler: true; highlight:[2, 5, 6, 8, 9]">
+        &lt;article class="span12  borderleft par_el in_spacing"&gt;
+            &lt;span class="period"&gt;2012 - Present&lt;/span&gt;
+            &lt;div class="bigspacing"&gt;
+                &lt;header&gt;
+                    &lt;h2&gt;Pixel Dizajn Studio&lt;/h2&gt;
+                    &lt;h3&gt;Designer&lt;/h3&gt;
+                &lt;/header&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc diam leo, ornare vulputate placerat luctus, sollicitudin id massa. Morbi elementum justo id lorem tempus quis interdum purus tristique. Nulla massa arcu, egestas at tincidunt placerat, luctus vel orci.&lt;/p&gt;
+                &lt;p&gt;Quisque non sollicitudin orci. Pellentesque lobortis rhoncus metus, quis bibendum nisi lacinia ut.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    </pre>
+    <br /><h5>Portfolio/Gallery items</h5>
+    
+    <p>To change/insert an image into the portfolio section you need to upload them onto your server and change the img element src (source) location as well as href of the a element that links to the full size image. Also it's pretty easy to change the title and the category texts inside h2 and p elements below the image. Make sure you have a double size thumbnail in the same directory with @2x at the end of the file name so the image displays nicely on Retina screens (automatically via Retina.js plugin).</p>
+    
+    <pre class="brush: js; ruler: true; highlight:[2, 3, 4]">
+        &lt;div class="galleryItem"&gt;
+            &lt;a href="img/2.jpg" class="lightbox['portfolio']"&gt;&lt;img src="img/gallery_2.jpg" alt="" /&gt;&lt;/a&gt;
+            &lt;h3&gt;Business Design&lt;/h3&gt;
+            &lt;p&gt;Graphic Design&lt;/p&gt;
+        &lt;/div&gt;
+    </pre>
+    <br /><h5>Contact form in the footer</h5>
+    
+    <p>The only thing that needs changing in the contact form is the email to deliver the messages to. You can edit this in the mailer.php file that is inside the php folder (You can do this with any code/text editor). You can change any other settings in the file if you want, but the email address is located at the following line:</p>
+    <pre class="brush: js; ruler: true; highlight:[2, 3, 4]">
+        $address = "mail@gmail.com"; // YOUR EMAIL ADDRESS
+    </pre>
+    <br />
+    <h3 id="css">CSS Structure</h3>
+    <hr />
+    
+    <p>I'm using one main CSS file <strong>(css/layout.css)</strong>, in this template which you are free to modify depending on the customization you require. There are also two additional style sheets that I do not recommend changing. Those style sheets reside in the <strong>'css'</strong> folder. The six additional style sheets are:</p>
+   
+    <ul class="square">
+     <li><strong>styles.css</strong> - The main stylesheet you are encouraged to modify.</li>
+     <li><strong>bootstrap.css</strong> - This is a main stylesheet that required for basic template styling like form, input, div, list element and etc. and it's located inside the bootstrap folder</li>
+     <li><strong>bootstrap-responsive.css</strong> - This stylesheet use for responsively the theme for other devices screen size support. It is located inside the bootstrap folder as well.</li>
+    </ul>
+   
+    <p>The main CSS file contains all of the specific stylings for the template. It is located in the 'css' folder and it's named styles.css. There's two other css files in that folder, one for skill bar and one for the lightbox plugin. The file is separated into the following sections:</p>
+   
+    <pre class="brush: js; ruler: true; first-line: 1;">
+    
+    /*
+
+    1.  GLOBAL
+
+    2.  BODY
+    3.  NAVIGATION
+    4.  HEADER
+    5.  ABOUT ME
+    6.  EXPERIENCE
+    7.  EDUCATION
+    8.  PORTFOLIO
+    9.  FOOTER
+
+    10.  RESPONSIVE
+
+    */
+    
+    </pre>
+   
+    <p>If you would like to edit a specific section of the site, simply find the appropriate label in the file, and then scroll down until you find the appropriate class that needs to be edited.</p>
+    
+    <br />
+    <h3 id="scripts">Scripts</h3>
+    <hr />
+    
+    <p>This template uses several scripts and plugins. If you're a developer, you will find this particularly useful.</p>
+   
+    <ul class="nav nav-list">
+     <li><a href="http://jquery.com" target="_blank"><i class="icon-chevron-right"></i> jQuery v1.8.0</a></li>
+     <li><a href="#" target="_blank"><i class="icon-chevron-right"></i>Parsley.js</a></li>
+     <li><a href="#" target="_blank"><i class="icon-chevron-right"></i>Lightbox.js</a></li>
+     <li><a href="#" target="_blank"><i class="icon-chevron-right"></i>Retina.js</a></li>
+     <li><a href="#" target="_blank"><i class="icon-chevron-right"></i>Custom script for scrolling and contact form</a></li>
+    </ul>
+    
+    <br />
+    <h3 id="psd">PSD Files</h3>
+    <hr />
+    
+    <p>The Photoshop file is included with the download package in the<strong>/psd</strong> folder with the name of <strong>PerfectCV.psd</strong>.</p>
+    
+    <br />
+    <h3 id="credits">Credits</h3>
+    <hr />
+    
+    <ul class="nav nav-list">
+     <li><a href="http://twitter.github.com/bootstrap" target="_blank"><i class="icon-chevron-right"></i> Twitter Bootstrap</a></li>
+     <li><a href="http://subtlepatterns.com" target="_blank"><i class="icon-chevron-right"></i> Subtle Patterns</a></li>
+     <li><a href="lokeshdhakar.com/projects/lightbox2/" target="_blank"><i class="icon-chevron-right"></i> Lightbox</a></li>
+     <li><a href="http://retinajs.com" target="_blank"><i class="icon-chevron-right"></i> Retina.js</a></li>
+     <li><a href="http://jquery.com" target="_blank"><i class="icon-chevron-right"></i> jQuery</a></li>
+     <li><a href="https://code.google.com/a/apache-extras.org/p/phpmailer/" target="_blank"><i class="icon-chevron-right"></i> PHPMailer</a></li>
+     <li><a href="http://fontello.com" target="_blank"><i class="icon-chevron-right"></i> Entypo font via Fontello</a></li>
+     <li><a href="code.google.com/p/html5shiv/" target="_blank"><i class="icon-chevron-right"></i> HTML5Shiv</a></li>
+    </ul>
+    
+    <br />
+    <p>Once again, thank you so much for purchasing this template. We'd be glad to help you if you have any questions relating to this template. Please contact us via the contact form on our ThemeForest profile or via kontakt@pixeldizajn.com. We will reply as soon as possible (48h tops).</p>
+    
+   </div>
+  
+  </div>     
+ </div>
+ 
+ <footer id="footer">
+  <div class="container">Copyright © 2013 by PixelDizajn. All rights reserved.</div>
+ </footer>
+
+</body>
+</html>
